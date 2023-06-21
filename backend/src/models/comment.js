@@ -4,6 +4,9 @@ import User from "./user.js";
 
 const commentSchema = new mongoose.Schema(
   {
+    _id: {
+      type: mongoose.Schema.Types.ObjectId
+    },
     blog: {
       type: Blog,
     },
