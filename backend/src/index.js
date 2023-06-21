@@ -1,2 +1,2 @@
 import express from "express";
-import config from "./config/serverConfig";
+import config from "./config/serverConfig.js";
