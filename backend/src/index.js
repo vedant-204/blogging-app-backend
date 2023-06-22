@@ -9,7 +9,7 @@ import apiRoutes from "./routes/index.js";
 const app = express()
 
 app.use(session({
-  secret: config.SESSION_SECRET,
+  secret: config.sessionSecret,
   resave: false,
   saveUninitialized: true3
 }))
