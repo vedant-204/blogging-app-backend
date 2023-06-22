@@ -12,6 +12,10 @@ const commentSchema = new mongoose.Schema(
     },
     user: {
       type: User,
+    },
+    isActive: {
+      type: Boolean,
+      default: true
     }
   },
   { timestamps: true }

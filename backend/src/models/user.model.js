@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
     }
   },
   { timestamps: true }
