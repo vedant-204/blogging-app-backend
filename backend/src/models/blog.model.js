@@ -16,6 +16,16 @@ const blogSchema = new mongoose.Schema(
     author: {
       type: User
     },
+    likes: {
+      type: Number
+    },
+    views: {
+      type: Number
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
+    }
   },
   { timestamps: true },
 );

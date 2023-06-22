@@ -19,6 +19,10 @@ const userSchema = new mongoose.Schema(
     },
     password: {
       type: String,
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
     }
   },
   { timestamps: true }
@@ -34,7 +38,7 @@ userSchema.methods.genJWT = function generate() {
       { id: this.id, email: this.email },
       config.secret,
       {
-        expiresIn: "1h"
+        expiresIn: config.expireTime
       }
     );
     return token;
